@@ -1,0 +1,13 @@
+<div class="container">
+    <h1>Relatorio de Serviço</h1>
+        <label for="data" class="form-label">Data</label>
+        <input [(ngModel)]="relatorio.data" id="date" type="date">
+        <br>
+        <label for="texto" class="form-label">Relatorio</label><br>
+        <textarea [(ngModel)]="relatorio.texto" cols=60 id="texto" rows="10" name="texto" maxlength="500" wrap="hard" placeholder="Escreva seu relatorio"></textarea>
+    
+    <br>
+        <label for="inspetor" class="form-label">Inspetor</label>
+        <input [(ngModel)]="relatorio.inspetor" class="form-control" type="text" placeholder="identifique-se senhor inspetor" aria-label="Disabled input example">
+        <button type="button" class="btn btn-outline-success" (click)="novo()">Adicionar</button>
+    </div> 
