@@ -1,5 +1,5 @@
 
-<div class="container">
+
     <table class="table table-dark table-striped">
         <thead>
           <tr>
@@ -7,6 +7,9 @@
             <th scope="col">Data</th>
             <th scope="col">texto</th>
             <th scope="col">inspetor</th>
+            <th scope="col">Info</th>
+            <th scope="col">excluir</th>
+            <th scope="col">editar</th>
 
           </tr>
         </thead>
@@ -16,4 +19,9 @@
             <td>{{r.data | uppercase }}</td>
             <td>{{r.texto | uppercase}}</td>
             <td>{{r.inspetor | uppercase}}</td>
-
+            <td> <button type="button" class="btn btn-outline-info" (click)="info(r.id)">Info</button></td>
+            <td> <button type="button" class="btn btn-outline-danger" (click)="excluir(r.id)">Excluir</button></td>
+            <td> <button type="button" class="btn btn-outline-warning" (click)="editar(r.id)">Editar</button></td>
+  </table>
+          
+            

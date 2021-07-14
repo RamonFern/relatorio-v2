@@ -8,13 +8,15 @@ import { HomeComponent } from './home/home.component';
 import { NovoRelatorioComponent } from './novo-relatorio/novo-relatorio.component';
 import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
+import { InfoComponent } from './info/info.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     NovoRelatorioComponent,
-    NavComponent
+    NavComponent,
+    InfoComponent
   ],
   imports: [
     BrowserModule,

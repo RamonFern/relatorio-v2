@@ -1,4 +1,6 @@
+import { Relatorio } from './../models/Relatorio';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { RelatorioService } from '../service/relatorio.service';
 
 @Component({
@@ -9,7 +11,8 @@ import { RelatorioService } from '../service/relatorio.service';
 export class HomeComponent implements OnInit {
 
   relatorioList: any
-  constructor(private relatorioService: RelatorioService) { }
+  relatorio: any
+  constructor(private relatorioService: RelatorioService, private router: Router) { }
 
   ngOnInit(): void {
     this.relatorioService.listar().subscribe(relatorios => {
@@ -19,6 +22,20 @@ export class HomeComponent implements OnInit {
     console.log(this.relatorioList)
   }
 
-  
+  excluir = (id: any) => {
+    this.relatorioService.excluir(id).subscribe(
+      success => console.log("Deletado com sucesso"),
+      error => console.log("Erro não foi possivel deletar.!"),
+      () => console.log("Requisição completa!")),
+      this.ngOnInit();
+  }
 
+  editar = (id: any) => {
+    this.router.navigate(['novo', id])
+  }
+  
+  info(id: any){
+    this.router.navigate(['info', id])
+  }
+  
 }
