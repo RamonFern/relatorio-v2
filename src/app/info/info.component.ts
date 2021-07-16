@@ -11,9 +11,11 @@ export class InfoComponent implements OnInit {
 
   id: any
   relatorio: any
+  veiculo: any
+  placa: any
 
   constructor(private activateRoute: ActivatedRoute,private relatorioService: RelatorioService,
-    private router: Router,) { }
+    private router: Router) { }
 
   ngOnInit(): void {
     this.activateRoute.params.subscribe(parametros => {
@@ -27,5 +29,6 @@ export class InfoComponent implements OnInit {
     })
   }
 
+ 
 
 }

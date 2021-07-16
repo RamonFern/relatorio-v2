@@ -45,7 +45,7 @@ export class NovoRelatorioComponent implements OnInit {
       error => console.log("Não foi possivel editar. ERRO!"),
       () => console.log('Requisição completa')
     )
-     }
+  }
 
   navegar = (rota: any) => {
       this.router.navigate([rota])
