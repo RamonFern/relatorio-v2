@@ -8,28 +8,27 @@ import { Relatorio } from '../models/Relatorio';
 })
 export class RelatorioService {
 
-  private readonly API = "https://relatorio-diario.herokuapp.com/api/v1/relatorio"
   constructor(private httpClient: HttpClient) { }
 
   listar() {
-    return this.httpClient.get(`${this.API}`);
+    return this.httpClient.get("https://relatorio-diario.herokuapp.com/api/v1/relatorio");
     
   }
 
   novo(relatorio: Relatorio){
-    return this.httpClient.post(this.API, relatorio)
+    return this.httpClient.post('https://relatorio-diario.herokuapp.com/api/v1/relatorio', relatorio)
   }
 
   excluir(id: any) {
-    return this.httpClient.delete(`${this.API}/${id}`)
+    return this.httpClient.delete(`https://relatorio-diario.herokuapp.com/api/v1/relatorio/${id}`)
   }
 
   editar(relatorio: Relatorio){
-    return this.httpClient.put(`${this.API}/${relatorio.id}`, relatorio)
+    return this.httpClient.put(`https://relatorio-diario.herokuapp.com/api/v1/relatorio/${relatorio.id}`, relatorio)
   }
 
   buscarItemId(id: any){
-    return this.httpClient.get<Relatorio>(`${this.API}/${id}`)
+    return this.httpClient.get<Relatorio>(`https://relatorio-diario.herokuapp.com/api/v1/relatorio/${id}`)
   }
   
 }
