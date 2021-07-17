@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Relatorio } from '../models/Relatorio';
-import { environment } from 'src/environments/environment';
+
 
 @Injectable({
   providedIn: 'root'
 })
 export class RelatorioService {
 
-  private readonly API = `${environment.API}`
+  private readonly API = "https://relatorio-diario.herokuapp.com/api/v1/relatorio"
   constructor(private httpClient: HttpClient) { }
 
   listar() {

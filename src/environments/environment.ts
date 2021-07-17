@@ -3,9 +3,9 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: true,
+  production: false
   //API: 'http://localhost:8080/api/v1/relatorio/'
-  API: 'https://relatorio-diario.herokuapp.com/api/v1/relatorio'
+  //API: 'https://relatorio-diario.herokuapp.com/api/v1/relatorio'
 };
 
 /*
