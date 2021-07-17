@@ -11,7 +11,7 @@ export class RelatorioService {
   constructor(private httpClient: HttpClient) { }
 
   listar() {
-    return this.httpClient.get("https://relatorio-diario.herokuapp.com/api/v1/relatorio");
+    return this.httpClient.get('https://relatorio-diario.herokuapp.com/api/v1/relatorio');
     
   }
 
