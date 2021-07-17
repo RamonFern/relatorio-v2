@@ -1,8 +1,33 @@
-<div class="container">
-    <nav class="nav nav-pills nav-justified">
-        <a class="nav-link" href="#">HOME</a>
-        <a [routerLink]="[ 'info' ]" class="nav-link" href="#">INFO</a>
-        <a [routerLink]="[ 'novo' ]" class="nav-link" href="#">NOVO</a>
+<div class="d-flex flex-column flex-md-row align-items-center p-3 px-md-4 mb-3 bg-white border-bottom shadow-sm">
+  <h5 class="my-0 mr-md-auto font-weight-normal">TRÂNSITO</h5>
+  <nav class="my-2 my-md-0 mr-md-3">
+    <a [routerLink]="[ 'inicio' ]" class="p-2 text-dark" href="#">INICIO</a>
+    <a class="p-2 text-dark" href="#">HOME</a>
+    <a [routerLink]="[ 'info' ]" class="p-2 text-dark" href="#">INFO</a>
+    <a [routerLink]="[ 'novo' ]" class="p-2 text-dark" href="#">NOVO</a>
+  </nav>
+  <a class="btn btn-outline-primary" href="#">Sign up</a>
+</div>
+
+
+
+<div class="collapse" id="navbarToggleExternalContent">
+  <div class="bg-dark p-4">
+    <h5 class="text-white h4">Collapsed content</h5>
+    <span class="text-muted">Toggleable via the navbar brand.</span>
+    <a class="nav-link" href="#">HOME</a>
+    <a [routerLink]="[ 'inicio' ]" class="nav-link" href="#">INICIO</a>
+    <a [routerLink]="[ 'info' ]" class="nav-link" href="#">INFO</a>
+    <a [routerLink]="[ 'novo' ]" class="nav-link" href="#">NOVO</a>
+  </div>
+</div>
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </div>
+</nav>
     
-      </nav>
-    </div> 
+    
+

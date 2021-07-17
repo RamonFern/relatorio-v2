@@ -1,3 +1,4 @@
+import { InicioComponent } from './inicio/inicio.component';
 import { InfoComponent } from './info/info.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
@@ -7,6 +8,7 @@ import { NovoRelatorioComponent } from './novo-relatorio/novo-relatorio.componen
 const routes: Routes = [
   {path: '', component: HomeComponent},
   {path: 'home', component: HomeComponent},
+  {path: 'inicio', component: InicioComponent},
   {path: 'novo', component: NovoRelatorioComponent},
   {path: 'novo/:id', component: NovoRelatorioComponent},
   {path: 'info/:id', component: InfoComponent},

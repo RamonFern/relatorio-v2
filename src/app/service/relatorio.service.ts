@@ -1,34 +1,35 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Relatorio } from '../models/Relatorio';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
 })
 export class RelatorioService {
 
+  private readonly API = `${environment.API}`
   constructor(private httpClient: HttpClient) { }
 
   listar() {
-    return this.httpClient.get('https://relatorio-diario.herokuapp.com/api/v1/relatorio');
-    //return this.httpClient.get('http://localhost:8080/api/v1/relatorio');
+    return this.httpClient.get(`${this.API}`);
     
   }
 
   novo(relatorio: Relatorio){
-    return this.httpClient.post('https://relatorio-diario.herokuapp.com/api/v1/relatorio', relatorio)
+    return this.httpClient.post(this.API, relatorio)
   }
 
   excluir(id: any) {
-    return this.httpClient.delete(`https://relatorio-diario.herokuapp.com/api/v1/relatorio/${id}`)
+    return this.httpClient.delete(`${this.API}/${id}`)
   }
 
   editar(relatorio: Relatorio){
-    return this.httpClient.put(`https://relatorio-diario.herokuapp.com/api/v1/relatorio/${relatorio.id}`, relatorio)
+    return this.httpClient.put(`${this.API}/${relatorio.id}`, relatorio)
   }
 
   buscarItemId(id: any){
-    return this.httpClient.get<Relatorio>(`https://relatorio-diario.herokuapp.com/api/v1/relatorio/${id}`)
+    return this.httpClient.get<Relatorio>(`${this.API}/${id}`)
   }
   
 }
