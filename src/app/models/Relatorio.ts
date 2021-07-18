@@ -1,6 +1,6 @@
 export class Relatorio{
     id: any;
-    constructor(public data: string,
+    constructor(public date: string,
                 public texto: string,
                 public inspetor: string){
     }

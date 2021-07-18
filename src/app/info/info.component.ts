@@ -1,3 +1,4 @@
+import { Relatorio } from './../models/Relatorio';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { RelatorioService } from '../service/relatorio.service';
@@ -11,8 +12,6 @@ export class InfoComponent implements OnInit {
 
   id: any
   relatorio: any
-  veiculo: any
-  placa: any
 
   constructor(private activateRoute: ActivatedRoute,private relatorioService: RelatorioService,
     private router: Router) { }
@@ -28,7 +27,4 @@ export class InfoComponent implements OnInit {
       }
     })
   }
-
- 
-
 }

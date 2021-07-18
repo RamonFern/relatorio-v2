@@ -1,3 +1,4 @@
+import { RelatorioService } from './../service/relatorio.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,9 +8,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class InicioComponent implements OnInit {
 
-  constructor() { }
+  veiculo: any
+  constructor(private relatorioService: RelatorioService) { }
 
   ngOnInit(): void {
+
   }
 
 }
