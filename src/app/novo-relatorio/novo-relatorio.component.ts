@@ -13,6 +13,7 @@ export class NovoRelatorioComponent implements OnInit {
   id: any
   relatorio: Relatorio = new Relatorio('','', '')
   textoBotao: string = 'Adicionar'
+  
   constructor(private relatorioService: RelatorioService, private router: Router, private acvateRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
