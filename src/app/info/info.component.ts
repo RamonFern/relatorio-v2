@@ -1,6 +1,7 @@
 import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { RelatorioService } from '../service/relatorio.service';
+import { Relatorio } from '../models/Relatorio';
 
 @Component({
   selector: 'app-info',
@@ -10,7 +11,7 @@ import { RelatorioService } from '../service/relatorio.service';
 export class InfoComponent implements OnInit {
 
   id: any
-  relatorio: any
+  relatorio: Relatorio = new Relatorio('','','')
 
   constructor(private activateRoute: ActivatedRoute,private relatorioService: RelatorioService,
     private router: Router) { }
