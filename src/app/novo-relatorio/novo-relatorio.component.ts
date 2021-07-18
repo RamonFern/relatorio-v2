@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Relatorio } from '../models/Relatorio';
 import { RelatorioService } from '../service/relatorio.service';
 
 @Component({
@@ -11,9 +10,9 @@ import { RelatorioService } from '../service/relatorio.service';
 export class NovoRelatorioComponent implements OnInit {
 
   id: any
-  relatorio: Relatorio = new Relatorio('','', '')
+  relatorio: any
   textoBotao: string = 'Adicionar'
-  
+
   constructor(private relatorioService: RelatorioService, private router: Router, private acvateRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
