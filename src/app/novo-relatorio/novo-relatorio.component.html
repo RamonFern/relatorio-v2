@@ -2,11 +2,23 @@
     <h1>Relatorio de Serviço</h1>
         <label for="date" class="form-label">Data</label>
         <input [(ngModel)]="relatorio.data" id="date" type="date">
+        <div class="form-check">
+            <input [(ngModel)]="relatorio.alteracao" class="form-check-input" type="checkbox" value="" id="alteracao">
+            <label class="form-check-label" for="alteracao">
+                Houve alteração
+            </label>
+          </div>
+        <br>
+        <label for="equipe" class="form-label">Equipe</label><br>
+        <textarea [(ngModel)]="relatorio.equipe" cols=60 id="equipe" rows="5" name="equipe" maxlength="250" wrap="hard" placeholder="informe a equipe de plantão e permulta"></textarea>
         <br>
         <label for="texto" class="form-label">Relatorio</label><br>
-        <textarea [(ngModel)]="relatorio.texto" cols=60 id="texto" rows="10" name="texto" maxlength="250" wrap="hard" placeholder="Escreva seu relatorio"></textarea>
-    
-    <br>
+        <textarea [(ngModel)]="relatorio.texto" cols=60 id="texto" rows="5" name="texto" maxlength="250" wrap="hard" placeholder="Escreva seu relatorio"></textarea>
+        <br>
+        <textarea [(ngModel)]="relatorio.texto2" cols=60 id="texto2" rows="5" name="texto2" maxlength="250" wrap="hard" placeholder="Segundo parágrafo"></textarea>
+        <br>
+        <textarea [(ngModel)]="relatorio.texto3" cols=60 id="texto3" rows="5" name="texto3" maxlength="250" wrap="hard" placeholder="Terceiro parágrafo"></textarea>
+        <br>
         <label for="inspetor" class="form-label">Inspetor</label>
         <input [(ngModel)]="relatorio.inspetor" class="form-control" type="text" placeholder="identifique-se senhor inspetor" aria-label="Disabled input example">
         <button type="button" class="btn btn-outline-success" (click)="incluir()">{{ textoBotao }}</button>

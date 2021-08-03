@@ -3,9 +3,15 @@
     Relatorio diário
   </div>
   <div class="card-body">
-    <h5 class="card-title">Inspetor: {{ relatorio.inspetor }}</h5>
-    <p class="card-text">{{ relatorio.texto }}</p>
+    <h5 class="card-title">equipe: {{ relatorio.equipe }}</h5>
+    <p class="card-text"></p>
+  </div>
+  <div class="card-body">
     
+    <p class="card-text">{{ relatorio.texto }}</p>
+    <p class="card-text">{{ relatorio.texto2 }}</p>
+    <p class="card-text">{{ relatorio.texto3 }}</p>
+    <h5 class="card-title">Inspetor: {{ relatorio.inspetor }}</h5>
   </div>
   <div class="card-footer text-muted">
     {{ relatorio.data | date: 'dd/MM/yyyy' }}

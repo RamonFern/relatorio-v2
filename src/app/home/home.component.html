@@ -4,6 +4,7 @@
           <tr>
             <th scope="col">#</th>
             <th scope="col">Data</th>
+            <th scope="col">Houve alteracao</th>
             <th scope="col">inspetor</th>
             <th scope="col">Info</th>
             <th scope="col">editar</th>
@@ -13,6 +14,7 @@
           <tr *ngFor="let r of relatorioList">
             <th scope="row" >{{r.id}}</th>
             <td>{{r.data | uppercase | date: 'dd/MM/yyyy'}}</td>
+            <td>{{r.alteracao }}</td>
             <td>{{r.inspetor | uppercase}}</td>
             <td> <button type="button" class="btn btn-outline-info" (click)="info(r.id)">Info</button></td>
             <td> <button type="button" class="btn btn-outline-warning" (click)="editar(r.id)">Editar</button></td>
