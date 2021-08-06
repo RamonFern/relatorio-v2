@@ -1,4 +1,3 @@
-import { Relatorio } from './../models/Relatorio';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { RelatorioService } from '../service/relatorio.service';

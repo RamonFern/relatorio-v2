@@ -12,8 +12,6 @@ export class InfoComponent implements OnInit {
 
   id: any
   relatorio: Relatorio = new Relatorio('',false ,'','','','','')
-  textoAlteracao: any
-  alteracao: any
 
   constructor(private activateRoute: ActivatedRoute,private relatorioService: RelatorioService,
     private router: Router) { }
@@ -22,16 +20,11 @@ export class InfoComponent implements OnInit {
     this.activateRoute.params.subscribe(parametros => {
       if(parametros['id']){
         this.id = parametros['id']
-        this.alteracao = parametros['alteracao']
         this.relatorioService.buscarItemId(this.id).subscribe(rel => {
           this.relatorio = rel
         })
         console.log(`Id enviado: ${this.id}`)
-
-        
       }
-      
-
     })
   }
 }

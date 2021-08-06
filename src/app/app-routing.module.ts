@@ -1,3 +1,5 @@
+import { NotificarComponent } from './notificar/notificar.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { InfoComponent } from './info/info.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +14,9 @@ const routes: Routes = [
   {path: 'novo', component: NovoRelatorioComponent},
   {path: 'novo/:id', component: NovoRelatorioComponent},
   {path: 'info/:id', component: InfoComponent},
-  {path: 'info', component: InfoComponent}
+  {path: 'info', component: InfoComponent},
+  {path: 'pesquisa', component: PesquisaComponent},
+  {path: 'notificar', component: NotificarComponent}
 ];
 
 @NgModule({

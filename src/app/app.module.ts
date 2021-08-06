@@ -10,6 +10,8 @@ import { NavComponent } from './nav/nav.component';
 import { FormsModule } from '@angular/forms';
 import { InfoComponent } from './info/info.component';
 import { InicioComponent } from './inicio/inicio.component';
+import { PesquisaComponent } from './pesquisa/pesquisa.component';
+import { NotificarComponent } from './notificar/notificar.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +20,9 @@ import { InicioComponent } from './inicio/inicio.component';
     NovoRelatorioComponent,
     NavComponent,
     InfoComponent,
-    InicioComponent
+    InicioComponent,
+    PesquisaComponent,
+    NotificarComponent
   ],
   imports: [
     BrowserModule,
