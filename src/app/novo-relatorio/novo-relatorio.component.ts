@@ -14,7 +14,9 @@ export class NovoRelatorioComponent implements OnInit {
   relatorio: Relatorio = new Relatorio('',false ,'','','','','')
   textoBotao: string = 'Adicionar'
 
-  constructor(private relatorioService: RelatorioService, private router: Router, private acvateRouter: ActivatedRoute) { }
+  constructor(private relatorioService: RelatorioService,
+              private router: Router, 
+              private acvateRouter: ActivatedRoute) { }
 
   ngOnInit(): void {
     this.acvateRouter.params.subscribe(parametros => {

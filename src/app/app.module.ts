@@ -12,6 +12,8 @@ import { InfoComponent } from './info/info.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { NotificarComponent } from './notificar/notificar.component';
+import { CadAgenteUserComponent } from './cad-agente-user/cad-agente-user.component';
+import { ListaAgentesComponent } from './lista-agentes/lista-agentes.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +24,9 @@ import { NotificarComponent } from './notificar/notificar.component';
     InfoComponent,
     InicioComponent,
     PesquisaComponent,
-    NotificarComponent
+    NotificarComponent,
+    CadAgenteUserComponent,
+    ListaAgentesComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { ListaAgentesComponent } from './lista-agentes/lista-agentes.component';
+import { CadAgenteUserComponent } from './cad-agente-user/cad-agente-user.component';
 import { NotificarComponent } from './notificar/notificar.component';
 import { PesquisaComponent } from './pesquisa/pesquisa.component';
 import { InicioComponent } from './inicio/inicio.component';
@@ -16,7 +18,10 @@ const routes: Routes = [
   {path: 'info/:id', component: InfoComponent},
   {path: 'info', component: InfoComponent},
   {path: 'pesquisa', component: PesquisaComponent},
-  {path: 'notificar', component: NotificarComponent}
+  {path: 'notificar', component: NotificarComponent},
+  {path: 'cad', component: CadAgenteUserComponent},
+  {path: 'cad/:id', component: CadAgenteUserComponent},
+  {path: 'listaAgentes', component: ListaAgentesComponent}
 ];
 
 @NgModule({

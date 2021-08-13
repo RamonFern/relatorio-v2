@@ -1,0 +1,23 @@
+<div class="container">
+    <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Função</th>
+            <th scope="col">Código</th>
+            <th scope="col">editar</th>
+            <th scope="col">excluir</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let a of agenteUserList">
+            <th scope="row" >{{a.id}}</th>
+            <td>{{a.nome | uppercase }}</td>
+            <td>{{a.funcao | uppercase }}</td>
+            <td>{{a.codigo }}</td>
+            <td> <button type="button" class="btn btn-outline-warning" (click)="editar(a.id)">Editar</button></td>
+            <td> <button type="button" class="btn btn-outline-info" (click)="excluir(a.id)">Excluir</button></td>
+            
+  </table>    
+</div>

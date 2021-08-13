@@ -1,0 +1,11 @@
+<div class="container">
+    <h1>Cadastrar novo agente</h1>
+        <label for="inspetor" class="form-label">Nome</label>
+        <input [(ngModel)]="agenteUser.nome" class="form-control" type="text" placeholder="nome do agente" aria-label="Disabled input example">
+        <label for="funcao" class="form-label">Função</label>
+        <input [(ngModel)]="agenteUser.funcao" class="form-control" type="text" placeholder="funçao" aria-label="Disabled input example">
+        <label for="codigo" class="form-label">Código</label>
+        <input [(ngModel)]="agenteUser.codigo" class="form-control" type="text" placeholder="codigo" aria-label="Disabled input example">
+        <button type="button" class="btn btn-outline-success" (click)="adicionar()">{{ textoBotao }}</button>
+    </div> 
+
